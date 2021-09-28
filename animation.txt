@@ -1,0 +1,16 @@
+.move-2 {
+  -webkit-animation: move2 5s infinite;
+  animation: move2 5s infinite;
+}
+
+@-webkit-keyframes move2 {
+  0% {
+    -webkit-transform: rotate(1deg) translate(2px, 2px);
+    transform: rotate(1deg) translate(2px, 2px); }
+  50% {
+    -webkit-transform: rotate(-1deg) translate(-2px, -2px);
+    transform: rotate(-1deg) translate(-2px, -2px); }
+  100% {
+    -webkit-transform: rotate(1deg) translate(2px, 2px);
+    transform: rotate(1deg) translate(2px, 2px); } 
+}
