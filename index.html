@@ -55,8 +55,8 @@
   <body>
     <div class="page__wrapper">
       <!-- Header -->
-      <header>
-        <div class="header__content sar-container">
+      <header id="header">
+        <div class="header__content sar-container" id="navlist">
           <div class="header__logo">
             <a href="#">
               <img src="./img/logo-2.png" alt="samar-logo" />
@@ -1016,7 +1016,36 @@
     <script>
       new WOW().init();
     </script>
+    <!-- Header scroll -->
 
+    <script>
+      
+      // Scrolls down 90px from the top of
+      // the document, to resize the navlist
+      // padding and the title font-size
+      window.onscroll = function() {
+          scrollFunction()
+      };
+            
+      function scrollFunction() {
+          if (document.body.scrollTop > 90 ||
+              document.documentElement.scrollTop > 90)
+          {
+              document.getElementById("navlist")
+                          .style.padding = "15px 0";
+                    
+              document.getElementById("header")
+                      .style.cssText = "background-color: white; backdrop-filter: blur(10px); box-shadow: 0 0 50px 0 rgb(0 0 0 / 10%);";
+          } 
+          else {
+              document.getElementById("navlist")
+                          .style.padding = "35px 0";
+                            
+              document.getElementById("header")
+                          .style.cssText = "background-color: transparent; backdrop-filter: unset; box-shadow: unset;";
+          }
+      }
+  </script>
     <!-- hover active class -->
     <script>
       $(document).ready(function () {
